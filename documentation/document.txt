@@ -1,0 +1,142 @@
+Calendar Sharing Application Documentation
+This documentation provides a comprehensive overview of the calendar sharing application, covering its setup, key components, and usage.
+
+Table of Contents
+Introduction
+Project Setup
+Folder Structure
+Key Components
+State Management
+Firebase Integration
+Routing
+API Endpoints
+Usage
+Deployment
+
+
+Introduction
+The Calendar Sharing Application allows vendors to share their availability and users to book time slots with them. It is built using React, Redux, Firebase Authentication, and Firebase Realtime Database.
+
+
+Project Setup
+Prerequisites
+Node.js (v14 or later)
+npm or yarn
+Firebase account
+json-server
+
+calendar-sharing-app/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── Components/
+│   ├── Pages/
+│   ├── Redux/
+│   ├── Route/
+│   ├── App.js
+│   ├── index.js
+│   └── firebase.js
+│   └── api/
+├
+├── package.json
+└── README.md
+
+
+
+Key Components
+VendorCard
+src/Components/VendorCard.js
+
+This component displays vendor information and allows users to book available slots.
+
+Login
+src/Pages/Login.js
+
+This component handles user login using Firebase Authentication.
+
+ProtectedRoutes
+src/Route/ProtectedRoutes.js
+
+This component manages protected routes that require authentication.
+
+State Management
+The application uses Redux for state management. The key slices of state are:
+
+Auth Slice
+src/Redux/authSlice.js
+
+Manages user authentication state.
+
+Booking Slice
+src/Redux/bookingSlice.js
+
+Manages booking state, including adding and removing bookings.
+
+Firebase Integration
+Firebase Configuration
+src/firebase.js
+
+This file contains the Firebase configuration and initializes Firebase services.
+
+Firebase Authentication
+Handles user authentication, including login, signup, and signout.
+
+Firebase Realtime Database
+Stores and retrieves booking and availability data.
+
+Routing
+The application uses React Router for navigation. The ProtectedRoutes component ensures that certain routes are accessible only to authenticated users.
+
+Routes Configuration
+src/Route/routes.js
+
+Defines the routes and their components.
+
+API Endpoints
+The application interacts with Firebase for most operations. Here are the key operations:
+
+Sign In User
+Method: POST
+Endpoint: /signInUser
+Description: Authenticates a user with email and password.
+Sign Up User
+Method: POST
+Endpoint: /signUpUser
+Description: Registers a new user with email, password
+Sign Out User
+Method: POST
+Endpoint: /signOutUser
+Description: Signs out the current user.
+Add Booking
+Method: POST
+Endpoint: /bookings
+Description: Adds a new booking.
+Update Availability
+Method: PATCH
+Endpoint: /vendors/:vendorId/availability
+Description: Updates a vendor's availability.
+Usage
+Booking a Slot
+Login:
+
+Navigate to the login page.
+Enter your email and password.
+Click "Sign in".
+View Vendors:
+
+Browse the list of vendors.
+Click on a vendor to view their availability.
+Select Date and Slot:
+
+Select a date from the calendar.
+Choose an available time slot.
+Book Slot:
+
+Click the "Book Slot" button to confirm the booking.
+Viewing Bookings
+Navigate to the "My Bookings" page to view all your booked slots.
+
+
+Deployment
+Build the Project
+Netlify used

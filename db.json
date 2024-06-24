@@ -1,0 +1,46 @@
+{
+    "vendors": [
+      {
+        "id": 1,
+        "name": "Vendor A",
+        "email": "vendorA@example.com",
+        "image": "/user1.png",
+        "availability": [
+          { "date": "2024-06-29", "slots": ["01:00", "2:00", "3:00"] },
+          { "date": "2024-06-28", "slots": ["09:00", "10:00", "11:00"] }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Vendor B",
+        "email": "vendorB@example.com",
+        "image": "/user2.png",
+        "availability": [
+          { "date": "2024-06-26", "slots": ["13:00", "14:00", "15:00"] },
+          { "date": "2024-06-30", "slots": ["13:00", "14:00", "15:00"] }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Vendor C",
+        "email": "vendorC@example.com",
+        "image": "/user3.jpg",
+        "availability": [
+          { "date": "2024-06-29", "slots": ["09:00", "11:00", "14:00"] },
+          { "date": "2024-06-22", "slots": ["10:00", "12:00", "15:00"] }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Vendor D",
+        "email": "vendorD@example.com",
+        "image": "/user4.png",
+        "availability": [
+          { "date": "2024-06-22", "slots": ["09:00", "10:00", "11:00"] },
+          { "date": "2024-06-23", "slots": ["13:00", "14:00", "15:00"] }
+        ]
+      }
+    ],
+    "bookings": []
+  }
+  
